@@ -1,0 +1,12 @@
+services:
+  keycloak:
+      image: quay.io/keycloak/keycloak:21.0
+      container_name: development-keycloak
+      environment:
+        KEYCLOAK_ADMIN: admin
+        KEYCLOAK_ADMIN_PASSWORD: admin
+      entrypoint: /opt/keycloak/bin/kc.sh start-dev --spi-theme-static-max-age=-1 --spi-theme-cache-themes=false --spi-theme-cache-templates=false
+      ports:
+        - "8081:8080"
+      volumes:
+        - ./ase:/opt/keycloak/themes/ase

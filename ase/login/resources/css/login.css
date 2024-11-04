@@ -1,0 +1,247 @@
+/* Global Styles */
+body, html {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+  min-height: 0;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.87);
+  margin: 0;
+  height: 100%;
+  font-family: Apple-System, Arial, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, STXihei, sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+/* Main Container */
+.login-content {
+  background-size: cover;
+  background-position: center;
+  min-height: 100%;
+  min-width: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f5f5f5;
+}
+
+/* Login Box */
+.login-content .box {
+  width: 80%;
+  max-width: 400px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.login-content .box .logo {
+  display: block;
+  margin: 0 auto 20px;
+  width: 100px;
+}
+
+.login-content .box .application-name {
+  font-size: 24px;
+  font-weight: 600;
+  color: #0055B8;
+  margin-bottom: 20px;
+}
+
+/* Form */
+.login-content .box .form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Input Container */
+.login-content .box .input-container {
+  width: 100%;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.login-content .box .input-container label {
+  font-weight: bold;
+  font-size: 14px;
+  color: #000;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.login-content .box .login-field,
+.login-content .box .submit {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  margin-top: 5px;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.login-content .box .login-field {
+  border: 1px solid #ddd;
+}
+
+.login-content .box .login-field:focus {
+  border-color: #0055B8;
+}
+
+.login-content .box .submit {
+  background-color: #0065bd;
+  color: #ffffff;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.login-content .box .submit:hover {
+  background-color: #004080;
+}
+
+/* Options (Keep me logged in / Show data) */
+.login-content .box .options {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.login-content .box .options label {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+/* Footer Links */
+.login-content .box .footer-links {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #777;
+}
+
+.login-content .box .footer-links a {
+  color: #0065bd;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+/* Message Text */
+.message-text {
+  font-size: 14px;
+  color: #b8082a;
+  margin-top: 20px;
+  text-align: left;
+}
+
+/* Logout Buttons */
+#kc-form-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+#kc-logout,
+#kc-logout-go-back {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 4px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+#kc-logout {
+  background-color: #139da5;
+  color: #ffffff;
+  border: none;
+}
+
+#kc-logout-go-back {
+  background-color: #ffffff;
+  color: #00754a;
+  border: 1px solid #00754a;
+}
+
+/* Logo Container */
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-container img {
+  max-height: 50px;
+  margin: 0 10px;
+}
+
+/* Login Instructions */
+.login-content .box .login-instructions {
+  text-align: left;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.87);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.login-content .box .login-instructions p {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.login-content .box .login-instructions ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.login-content .box .login-instructions li {
+  margin-bottom: 5px;
+  color: #333;
+}
+
+/* Hyperlink styling for "TUM username / TUM ID" */
+.login-content .box .login-instructions .highlight-link {
+  font-weight: bold;
+  color: #0055B8;
+  text-decoration: none;
+}
+
+.login-content .box .login-instructions .highlight-link:hover {
+  color: #003366;
+}
+
+/* Bold and black styling for "@tum.de" and "@mytum.de" */
+.login-content .box .login-instructions .highlight-email {
+  font-weight: bold;
+  color: #000000;
+}
+
+.alert {
+  margin-top: 10px; 
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.help-link {
+  margin-top: 20px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.help-link a {
+  color: #9a9797; /* Light grey color */
+  text-decoration: none;
+}
+
+.help-link a:hover {
+  color: #808080; /* Slightly darker grey on hover */
+  text-decoration: underline;
+}

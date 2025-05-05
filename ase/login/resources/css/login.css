@@ -77,7 +77,10 @@ body {
 }
 
 .login-content .box .login-field,
-.login-content .box .submit {
+.login-content .box .submit,
+button,
+input[type="submit"],
+input[type="button"]{
   width: 100%;
   padding: 10px;
   font-size: 14px;
@@ -94,7 +97,10 @@ body {
   border-color: #0055B8;
 }
 
-.login-content .box .submit {
+.login-content .box .submit,
+button,
+input[type="submit"],
+input[type="button"]{
   background-color: #0065bd;
   color: #ffffff;
   font-weight: bold;
@@ -103,7 +109,10 @@ body {
   margin-top: 20px;
 }
 
-.login-content .box .submit:hover {
+.login-content .box .submit:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover{
   background-color: #004080;
 }
 
@@ -207,6 +216,39 @@ body {
   color: #333;
 }
 
+/* Passkey setup Instructions */
+.passkey-setup {
+  text-align: middle;
+  font-size: 14px;
+  color: #000000;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+div.passkey-setup{
+  margin-top: 20px;
+}
+
+.passkey-setup h{
+  display: block;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.passkey-setup a{
+  text-decoration: underline;
+  color: #626262;
+}
+
+.passkey-setup a:hover{
+  color: #0055B8;
+}
+.passkey-setup p{
+  color: #333;
+  
+}
+
 /* Hyperlink styling for "TUM username / TUM ID" */
 .login-content .box .login-instructions .highlight-link {
   font-weight: bold;
@@ -245,4 +287,17 @@ body {
 .help-link a:hover {
   color: #808080; /* Slightly darker grey on hover */
   text-decoration: underline;
+}
+
+/* passkey page "select your passkey" text*/
+.passkey-subtitle-select {
+  font-size: 17px;
+  color: #737373;
+  text-align: center;
+  font-weight: 450;
+}
+
+.passkey-placeholder::placeholder{
+  color:rgba(255, 255, 255, 0.58);
+  text-align: center;
 }

@@ -2,9 +2,6 @@
 <@layout.registrationLayout displayInfo=social.displayInfo; section>
     <#if section = "title">
         Sign in to ${realm.displayName!''}
-
-    <#elseif section = "header">
-        <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet"/>
     <#elseif section = "form">
         <div class="box-container">
         <#if realm.password>
@@ -19,6 +16,7 @@
                         <input id="password" class="login-field" placeholder="Password" type="password" name="password" tabindex="2">
                     </div>
                     <input class="submit" type="submit" value="Sign in" tabindex="3">
+                    <input class="submit" type="submit" name="tryAnotherWay" value="Try Another Way" tabindex="4">
                 </form>
 
                 <div class="help-link">

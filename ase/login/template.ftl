@@ -9,6 +9,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
     <title><#nested "title"></title>
+    <script type="importmap">
+        {
+            "imports": {
+                "rfc4648": "/resources/yxmtz/common/keycloak/vendor/rfc4648/rfc4648.js"
+            }
+        }
+    </script>
     <#if properties.styles?has_content>
         <#list properties.styles?split(' ') as style>
             <link href="${url.resourcesPath}/${style}" rel="stylesheet" />
@@ -18,7 +25,7 @@
 </head>
 
 	<body>
-        <#nested "header">
+        <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet"/>
         <div class="login-content" style="background-color: white;">
                 <div class="box">
                     <div>

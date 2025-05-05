@@ -1,7 +1,7 @@
 <#import "template.ftl" as layout>
 <@layout.registrationLayout displayInfo=(realm.registrationAllowed && !registrationDisabled??); section>
     <#if section = "title">
-     title
+        Sign in to ${realm.displayName!''}
     <#elseif section = "header">
         ${kcSanitize(msg("passkey-login-title"))?no_esc}
     <#elseif section = "form">
@@ -100,7 +100,7 @@
                         <div class="passkey-setup">
                             <h class="passkey-setup">How to enable passkeys:</h>
                             <p class="passkey-setup" style="display: inline-block">1. Log in </p> 
-                            <a href="http://localhost:8080/realms/${realm.getName()}/account/account-security/signing-in">here</a>
+                            <a href="/realms/${realm.getName()}/account/account-security/signing-in">here</a>
                             <p class="passkey-setup">2. Select "Set up Passkey"</p>
                         </div>
                     </#if>

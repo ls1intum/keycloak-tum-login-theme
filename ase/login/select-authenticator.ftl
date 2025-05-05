@@ -4,6 +4,8 @@
         <#if section = "header">
             ${msg("loginChooseAuthenticator")}
         </#if>
+    <#elseif section = "title">
+        Sign in to ${realm.displayName!''}
     <#elseif section = "form">
 
         <form id="kc-select-credential-form" class="${properties.kcFormClass!}" action="${url.loginAction}" method="post">

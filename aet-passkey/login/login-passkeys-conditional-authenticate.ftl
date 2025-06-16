@@ -70,26 +70,7 @@
             <div id="kc-form">
                 <div id="kc-form-wrapper">
                     <#if realm.password>
-                        <form id="kc-form-login" onsubmit="login.disabled = true; return true;" action="${url.loginAction}" method="post" style="display:none">
-                            <#if !usernameHidden??>
-                                <div class="${properties.kcFormGroupClass!}">
-                                    <label for="username" class="passkey-subtitle-select ${properties.kcLabelClass!}">${msg("passkey-autofill-select")}</label>
-                                    <input tabindex="1" id="username"
-                                        placeholder="Passkey"
-                                        aria-invalid="<#if messagesPerField.existsError('username')>true</#if>"
-                                        class="${properties.kcInputClass!} submit passkey-placeholder" name="username"
-                                        value="${(login.username!'')}"
-                                        autocomplete="username webauthn"
-                                        type="text" autofocus autocomplete="off"
-                                        dir="ltr"/>
-                                    <#if messagesPerField.existsError('username')>
-                                        <span id="input-error-username" class="${properties.kcInputErrorMessageClass!}" aria-live="polite">
-                                            ${kcSanitize(messagesPerField.get('username'))?no_esc}
-                                        </span>
-                                    </#if>
-                                </div>
-                            </#if>
-                        </form>
+                        <button id="authenticateWebAuthnButton"> Passkey login </button>
                         <form id="kc-select-try-another-way-form" action="${url.loginAction}" method="post">
                             <div class="${properties.kcFormGroupClass!}">
                                 <input tabindex="4" type="hidden" name="tryAnotherWay" value="on"/>
@@ -104,11 +85,6 @@
                             <p class="passkey-setup">2. Select "Set up Passkey"</p>
                         </div>
                     </#if>
-                    <div id="kc-form-passkey-button" class="${properties.kcFormButtonsClass!}" style="display:none">
-                        <input id="authenticateWebAuthnButton" type="button" autofocus="autofocus"
-                            value="${kcSanitize(msg("passkey-doAuthenticate"))}"
-                            class="${properties.kcButtonClass!} ${properties.kcButtonPrimaryClass!} ${properties.kcButtonBlockClass!} ${properties.kcButtonLargeClass!}"/>
-                    </div>
                 </div>
             </div>
         </div>
@@ -129,17 +105,6 @@
             authButton.addEventListener("click", () => {
                 authenticateByWebAuthn(input);
             });
-
-            const args = {
-                isUserIdentified : ${isUserIdentified},
-                challenge : '${challenge}',
-                userVerification : '${userVerification}',
-                rpId : '${rpId}',
-                createTimeout : ${createTimeout},
-                errmsg : "${msg("passkey-unsupported-browser-text")?no_esc}"
-            };
-
-            document.addEventListener("DOMContentLoaded", (event) => initAuthenticate(args));
         </script>
 
     <#elseif section = "info">

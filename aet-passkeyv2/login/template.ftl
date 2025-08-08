@@ -12,7 +12,7 @@
     <script type="importmap">
         {
             "imports": {
-                "rfc4648": "/resources/oovue/common/keycloak/vendor/rfc4648/rfc4648.js"
+                "rfc4648": "${url.resourcesCommonPath}/vendor/rfc4648/rfc4648.js"
             }
         }
     </script>

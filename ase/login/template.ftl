@@ -36,9 +36,9 @@
                 <#nested "form">
                 
                 <div class="footer-links">
-                    <a href="https://ase.cit.tum.de/impressum/">Imprint</a> |
-                    <a href="https://ase.cit.tum.de/datenschutz/">Privacy Statement</a> |
-                    <a href="https://ase.cit.tum.de/">Applied Education Technologies</a> 
+                    <a href="https://aet.cit.tum.de/impressum/">Imprint</a> |
+                    <a href="https://aet.cit.tum.de/datenschutz/">Privacy Statement</a> |
+                    <a href="https://aet.cit.tum.de/">Applied Education Technologies</a> 
                 </div>
             </div> 
         </div>

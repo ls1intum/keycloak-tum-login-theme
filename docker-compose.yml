@@ -9,4 +9,4 @@ services:
       ports:
         - "8081:8080"
       volumes:
-        - ./ase:/opt/keycloak/themes/ase
+        - ./aet-passkeyv2:/opt/keycloak/themes/aet-passkeyv2

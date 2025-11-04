@@ -301,3 +301,53 @@ div.passkey-setup{
   color:rgba(255, 255, 255, 0.58);
   text-align: center;
 }
+
+@media (prefers-color-scheme: dark) {
+  body, html {
+    background-color: #2b2e37;
+  }
+  .login-content .box {
+    background-color: #2b2e37;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .login-content .box .login-field {
+    border: 1px solid #4e4e4e;
+    background-color: #2b2e37;
+    color: #ffffff; /* username and password */
+  }
+
+  .login-content {
+    background-color: #2b2e37 !important; /* overwrite keycloak-default inline css */
+    color: #fff; /* applied education */
+  }
+
+  .login-content .box .input-container label {
+    color: #fff;
+  }
+
+  .message-text {
+    color: #d42246;
+  }
+
+  .help-link a {
+    color: #c2c2c2; /* Light grey color */
+    text-decoration: none;
+  }
+
+  .help-link a:hover {
+    color: rgb(223, 223, 223); /* Slightly lighter grey on hover */
+    text-decoration: underline;
+  }
+
+  .login-content .box .submit:hover,
+  button:hover,
+  input[type="submit"]:hover,
+  input[type="button"]:hover{
+    background-color: #0372e1;
+  }
+
+  .login-content .box .footer-links a {
+    color: #006ecf;
+  }
+}

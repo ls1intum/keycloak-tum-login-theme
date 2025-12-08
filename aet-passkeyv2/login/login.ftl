@@ -1,4 +1,5 @@
 <#import "template.ftl" as layout>
+<#import "passkeys.ftl" as passkeys>
 <@layout.registrationLayout displayInfo=social.displayInfo; section>
     <#if section = "title">
         Sign in to ${realm.displayName!''}
@@ -16,8 +17,10 @@
                         <input id="password" class="login-field" placeholder="Password" type="password" name="password" tabindex="2">
                     </div>
                     <input class="submit" type="submit" value="Sign in" tabindex="3">
-                    <input class="submit" type="submit" name="tryAnotherWay" value="Try Another Way" tabindex="4">
                 </form>
+                <div class="submit">
+                    <@passkeys.conditionalUIData />
+               </div>
 
                 <div class="help-link">
                     <a href="https://www.it.tum.de/en/it/faq/account-login-tum-id-mwnid-tumcard/" 

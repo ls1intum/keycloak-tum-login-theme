@@ -25,7 +25,6 @@
 </head>
 
 	<body>
-        <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet"/>
         <div class="login-content" style="background-color: white;">
                 <div class="box">
                     <div>

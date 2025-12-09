@@ -302,6 +302,11 @@ div.passkey-setup{
   text-align: center;
 }
 
+#authenticateWebAuthnButton {
+  color: #ffffff;
+  text-decoration: none;
+}
+
 @media (prefers-color-scheme: dark) {
   body, html {
     background-color: #2b2e37;

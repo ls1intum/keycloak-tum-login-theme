@@ -7,7 +7,7 @@ body, html {
   min-height: 0;
   font-size: 14px;
   color: rgba(0, 0, 0, 0.87);
-  margin: 0;
+  margin: 10;
   height: 100%;
   font-family: Apple-System, Arial, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, STXihei, sans-serif;
 }
@@ -102,11 +102,12 @@ button,
 input[type="submit"],
 input[type="button"]{
   background-color: #0065bd;
-  color: #ffffff;
+  color: #ffffff !important;
   font-weight: bold;
   border: none;
   cursor: pointer;
   margin-top: 20px;
+  text-decoration: none;
 }
 
 .login-content .box .submit:hover,
@@ -114,6 +115,9 @@ button:hover,
 input[type="submit"]:hover,
 input[type="button"]:hover{
   background-color: #004080;
+
+  color: #ffffff !important;
+  text-decoration: none;
 }
 
 /* Options (Keep me logged in / Show data) */
@@ -307,6 +311,7 @@ div.passkey-setup{
   text-decoration: none;
 }
 
+
 @media (prefers-color-scheme: dark) {
   body, html {
     background-color: #2b2e37;
@@ -355,4 +360,5 @@ div.passkey-setup{
   .login-content .box .footer-links a {
     color: #006ecf;
   }
+
 }
